@@ -107,7 +107,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortionAmount: 1
+    - _DistortionAmount: 3
     - _DistortionScale: 20
     - _DstBlend: 0
     - _DstBlendAlpha: 0
