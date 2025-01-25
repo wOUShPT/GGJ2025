@@ -78,6 +78,7 @@ GameObject:
   - component: {fileID: 4502119989451585994}
   - component: {fileID: 4504268563414285462}
   - component: {fileID: 2641189343107736257}
+  - component: {fileID: 5528659837934069526}
   m_Layer: 0
   m_Name: BombGood
   m_TagString: Untagged
@@ -180,8 +181,8 @@ SphereCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 1.2
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.2
+  m_Center: {x: 0.02, y: -0.19, z: 0}
 --- !u!114 &4504268563414285462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,6 +218,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5528659837934069526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587293391724827376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34f77ed186edb7a47adaba07cb1ed2b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1389563543937114205
 GameObject:
   m_ObjectHideFlags: 0
@@ -5206,9 +5219,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onEndInteractions:
-  - {fileID: 8743674777820440822}
+  - {fileID: 6627549304817100000}
   animator: {fileID: 2641189343107736257}
-  mode: 0
+  mode: 1
   animatorController: {fileID: 9100000, guid: acc5c45041911354cb6916210abc02eb, type: 2}
   layers:
   - name: Base Layer
@@ -5228,7 +5241,13 @@ MonoBehaviour:
     intValue: 0
     floatValue: 0
     boolValue: 0
-  currentParameters: []
+  currentParameters:
+  - name: Pop
+    hash: 563999222
+    type: 9
+    intValue: 0
+    floatValue: 0
+    boolValue: 0
   waitForAnimationEnd: 1
 --- !u!114 &8743674777820440822
 MonoBehaviour:
@@ -5244,7 +5263,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onEndInteractions:
   - {fileID: 3135094065686343859}
-  - {fileID: 6627549304817100000}
   toInstantiate:
   - ToSpawn: {fileID: 3882788583460779543, guid: 3002e82d5edb19547b390269702fb094, type: 3}
     transformMode: 1
