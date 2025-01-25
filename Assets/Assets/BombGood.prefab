@@ -5183,6 +5183,7 @@ GameObject:
   - component: {fileID: 7299184791402493915}
   - component: {fileID: 3135094065686343859}
   - component: {fileID: 8743674777820440822}
+  - component: {fileID: 4249364715525817939}
   - component: {fileID: 6627549304817100000}
   m_Layer: 0
   m_Name: PopAnimation
@@ -5262,7 +5263,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onEndInteractions:
-  - {fileID: 3135094065686343859}
+  - {fileID: 4249364715525817939}
   toInstantiate:
   - ToSpawn: {fileID: 3882788583460779543, guid: 3002e82d5edb19547b390269702fb094, type: 3}
     transformMode: 1
@@ -5272,6 +5273,25 @@ MonoBehaviour:
     spawnTransform: {fileID: 2707682391668114549}
     parentMode: 0
     spawnParent: {fileID: 0}
+--- !u!114 &4249364715525817939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5842365640576342826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4aed1437f88f9844a4194ffda041aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEndInteractions:
+  - {fileID: 3135094065686343859}
+  mode: 1
+  audioClip: {fileID: 8300000, guid: 922d19a62ecff8e47b32823e727e4464, type: 3}
+  volume: 1
+  audioSource: {fileID: 0}
+  clipPosition: {fileID: 0}
 --- !u!114 &6627549304817100000
 MonoBehaviour:
   m_ObjectHideFlags: 0
