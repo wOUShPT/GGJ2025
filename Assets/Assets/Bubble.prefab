@@ -73,6 +73,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4172368404189249256}
   - component: {fileID: 8194388631592130026}
+  - component: {fileID: 4555263805878011898}
+  - component: {fileID: 687728311365370796}
   m_Layer: 0
   m_Name: PopAnimation
   m_TagString: Untagged
@@ -110,6 +112,8 @@ MonoBehaviour:
   onEndInteractions:
   - {fileID: 8581758209656859864}
   - {fileID: 4324353234048747958}
+  - {fileID: 4555263805878011898}
+  - {fileID: 687728311365370796}
   animator: {fileID: 5084841661443000700}
   mode: 1
   animatorController: {fileID: 9100000, guid: e3408ccdaece24c4283ac041391fdd51, type: 2}
@@ -139,6 +143,59 @@ MonoBehaviour:
     floatValue: 0
     boolValue: 0
   waitForAnimationEnd: 0
+--- !u!114 &4555263805878011898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059783407026795284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ef106ae0a1610e46ae0bf6d04ed3957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEndInteractions: []
+  mode: 1
+  audioClips:
+  - {fileID: 8300000, guid: 027fa2533f4ad1e40b0a504bb8e682d7, type: 3}
+  - {fileID: 8300000, guid: bd863fa9a0937164fa295837ca6ddc31, type: 3}
+  - {fileID: 8300000, guid: 2d0b2f37f2f651041ad6116c05870e4a, type: 3}
+  - {fileID: 8300000, guid: dd24dea936cc62d47be90ed35fad472a, type: 3}
+  - {fileID: 8300000, guid: a4bb4b60cf6a6d440b96f821d0f8b4ae, type: 3}
+  - {fileID: 8300000, guid: fe0b52de45cb6e948af4494e559d51fc, type: 3}
+  - {fileID: 8300000, guid: 5c15b7ccde1ad1a4ead6d599d062ca58, type: 3}
+  volume: 1
+  audioSource: {fileID: 0}
+  clipPosition: {fileID: 957147784913129372}
+--- !u!114 &687728311365370796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5059783407026795284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22c85796423c884492b383713c13e1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEndInteractions: []
+  UnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7157238434921455856}
+        m_TargetAssemblyTypeName: UnityEngine.Collider, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &5397446166573843353
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,7 +300,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8450236720330482598}
-  - {fileID: 6386153107288249024}
   - {fileID: 8188693850561803764}
   - {fileID: 3533969956583851114}
   m_Father: {fileID: 0}
@@ -400,7 +456,6 @@ GameObject:
   - component: {fileID: 3784504352829049884}
   - component: {fileID: 8581758209656859864}
   - component: {fileID: 3078391921460192985}
-  - component: {fileID: 663267828528055141}
   - component: {fileID: 78573943604201835}
   m_Layer: 0
   m_Name: PopInstantiate
@@ -439,7 +494,7 @@ MonoBehaviour:
   onEndInteractions:
   - {fileID: 3078391921460192985}
   toInstantiate:
-  - ToSpawn: {fileID: 2418282044565348663, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
+  - ToSpawn: {fileID: 1879035896536200, guid: a14411b84b82c984a8d857424c9de30b, type: 3}
     transformMode: 1
     spawnPosition: {x: 0, y: 0, z: 0}
     spawnRotation: {x: 0, y: 0, z: 0}
@@ -459,8 +514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3204575031d616b4e9369d1da8211d67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onEndInteractions:
-  - {fileID: 663267828528055141}
+  onEndInteractions: []
   toInstantiate:
   - ToSpawn: {fileID: 3481311983587495091, guid: 923a1004f29cf1344b8f1ae9fe50275b, type: 3}
     transformMode: 1
@@ -470,25 +524,6 @@ MonoBehaviour:
     spawnTransform: {fileID: 3784504352829049884}
     parentMode: 0
     spawnParent: {fileID: 0}
---- !u!114 &663267828528055141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5735600761791337719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6e113a713f89c6f4382f024982abc3d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onEndInteractions:
-  - {fileID: 78573943604201835}
-  waitTime: 1
-  unscaledTime: 0
-  intVector: 0
-  intRange: {x: 0, y: 0}
-  range: {x: 1, y: 1}
 --- !u!114 &78573943604201835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,66 +680,4 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ccab8033c2160f249aa1ad9e390619ea, type: 3}
   m_PrefabInstance: {fileID: 8273109199261516877}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &9031665962798322204
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 957147784913129372}
-    m_Modifications:
-    - target: {fileID: 2418282044565348663, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_Name
-      value: PopSystem
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
---- !u!4 &6386153107288249024 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2735585192230568156, guid: 6baa35365c381544e88b909a8f43df32, type: 3}
-  m_PrefabInstance: {fileID: 9031665962798322204}
   m_PrefabAsset: {fileID: 0}
