@@ -4953,6 +4953,8 @@ GameObject:
   m_Component:
   - component: {fileID: 957147784913129372}
   - component: {fileID: 5084841661443000700}
+  - component: {fileID: 4904224615233074861}
+  - component: {fileID: 5877541465770583070}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -5000,6 +5002,36 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4904224615233074861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601315336425519178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a988b56ae8bc364f87414caccc4a8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interaction: {fileID: 5877541465770583070}
+--- !u!114 &5877541465770583070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5601315336425519178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32542ebdfe57d3e4d947822eea55b59b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEndInteractions: []
+  positionXRange: {x: -7, y: 7}
+  positionYRange: {x: 0, y: 6.5}
+  scaleRange: {x: 0.5, y: 1.5}
+  targetObject: {fileID: 957147784913129372}
 --- !u!1 &6690549023793836843
 GameObject:
   m_ObjectHideFlags: 0

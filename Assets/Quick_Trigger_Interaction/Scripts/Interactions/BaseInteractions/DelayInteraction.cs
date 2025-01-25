@@ -1,5 +1,6 @@
 // Copyright (c) AstralShift. All rights reserved.
 
+using AstralShift.QTI.Helpers.Attributes;
 using AstralShift.QTI.Interactors;
 using System.Collections;
 using UnityEngine;
@@ -12,11 +13,19 @@ namespace AstralShift.QTI.Interactions
     [AddComponentMenu("QTI/Interactions/DelayInteraction")]
     public class DelayInteraction : Interaction
     {
-        [Tooltip("Wait time to execute the onEnd interactions (seconds)")] [SerializeField]
+        [Tooltip("Wait time to execute the onEnd interactions (seconds)")]
+        [SerializeField]
         protected float waitTime = 1;
 
-        [Tooltip("Defines if wait time is <Time.timescale> dependent \n \n(Default: false)")] [SerializeField]
+        [Tooltip("Defines if wait time is <Time.timescale> dependent \n \n(Default: false)")]
+        [SerializeField]
         protected bool unscaledTime;
+
+        public bool intVector = false;
+        [ConditionalHide(nameof(intVector))]
+        public Vector2Int intRange;
+        [ConditionalHide(nameof(intVector), false)]
+        public Vector2 range;
 
         public float WaitTime
         {
@@ -27,6 +36,16 @@ namespace AstralShift.QTI.Interactions
         public override void Interact(IInteractor interactor)
         {
             base.Interact(interactor);
+
+            if (intVector)
+            {
+                waitTime = Random.Range(intRange.x, intRange.y);
+
+            }
+            else
+            {
+                waitTime = Random.Range(range.x, range.y);
+            }
 
             if (unscaledTime)
             {
