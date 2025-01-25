@@ -1,5 +1,6 @@
 // Copyright (c) AstralShift. All rights reserved.
 
+using System;
 using UnityEditor;
 using UnityEditorInternal;
 using UnityEngine;
@@ -16,11 +17,10 @@ namespace AstralShift.QTI.Interactions
         private ReorderableList _toInstantiateList;
         private int _selectedToInstantiateListIndex;
 
-        public override VisualElement CreateInspectorGUI()
+        private void OnEnable()
         {
             _targetScript = target as InstantiateInteraction;
             CreateToInstantiateList();
-            return base.CreateInspectorGUI();
         }
 
         public override void DrawProperties()
