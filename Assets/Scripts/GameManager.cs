@@ -30,6 +30,8 @@ public class GameManager : MonoBehaviour
     public Animator logoAnimator;
     public int Counter => _counter;
 
+    private const string CounterPrefsKey = "Bomble/Counter";
+
     public void StartGame()
     {
         StartCoroutine(StarGameCoroutine());
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void IncreaseCounter(int value)
     {
         _counter += value;
+        PlayerPrefs.SetInt(CounterPrefsKey, _counter);
         if (value > 0)
         {
             animator.Play("increase");
@@ -59,7 +62,7 @@ public class GameManager : MonoBehaviour
 
     public void ResetCounter()
     {
-        _counter = 0;
+        _counter = PlayerPrefs.GetInt(CounterPrefsKey, 0);
         UpdateCounter();
     }
 
