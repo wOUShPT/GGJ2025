@@ -206,7 +206,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342811534726733483}
-  - component: {fileID: 7776317087324513161}
+  - component: {fileID: 2206350471825108635}
   - component: {fileID: 6438146729816862967}
   m_Layer: 0
   m_Name: Movement
@@ -230,7 +230,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 8188693850561803764}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7776317087324513161
+--- !u!114 &2206350471825108635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -239,7 +239,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5397446166573843353}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46abe66bc859b3c42ad69e8749bab667, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a8bc5f85e3d208479790e2442cba243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   interaction: {fileID: 6438146729816862967}

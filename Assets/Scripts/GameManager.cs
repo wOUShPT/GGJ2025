@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
+
+        Application.targetFrameRate = 60;
         animator = counterText.GetComponent<Animator>();
         ResetCounter();
         counterText.gameObject.SetActive(false);
