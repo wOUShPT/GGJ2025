@@ -736,7 +736,7 @@ GameObject:
   - component: {fileID: 1581526462}
   - component: {fileID: 1581526463}
   - component: {fileID: 1581526464}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: KillPlane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
