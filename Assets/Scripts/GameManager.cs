@@ -1,3 +1,4 @@
+using AstralShift.QTI.Helpers;
 using System;
 using TMPro;
 using UnityEngine;
@@ -16,18 +17,27 @@ public class GameManager : MonoBehaviour
         {
             Destroy(this);
         }
-        
+        animator = counterText.GetComponent<Animator>();
         ResetCounter();
     }
 
     public TextMeshProUGUI counterText;
     private int _counter;
+    private Animator animator;
     public int Counter => _counter;
 
 
     public void IncreaseCounter(int value)
     {
         _counter += value;
+        if (value > 0)
+        {
+            animator.Play("increase");
+        }
+        else
+        {
+            animator.Play("decrease");
+        }
         UpdateCounter();
     }
 
