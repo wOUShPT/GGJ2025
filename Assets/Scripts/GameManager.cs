@@ -27,6 +27,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI counterText;
     private int _counter;
     private Animator animator;
+    public Animator logoAnimator;
     public int Counter => _counter;
 
     public void StartGame()
@@ -36,7 +37,10 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator StarGameCoroutine()
     {
-        yield return new WaitForSeconds(1f);    
+        logoAnimator.Play("INTROopen");
+        yield return new WaitForSeconds(1f);
+        game.SetActive(true);
+        counterText.gameObject.SetActive(true);
     }
 
     public void IncreaseCounter(int value)
