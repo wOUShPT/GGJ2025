@@ -60,7 +60,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onEndInteractions: []
   positionXRange: {x: -2, y: 2}
-  positionYRange: {x: -3, y: -3}
+  positionYRange: {x: -4.5, y: -4.5}
   scaleRange: {x: 2, y: 3}
   targetObject: {fileID: 2707682391668114549}
 --- !u!1 &587293391724827376
@@ -5493,14 +5493,14 @@ ParticleSystem:
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
   looping: 1
-  prewarm: 1
+  prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.25
     minScalar: 0
     maxCurve:
       serializedVersion: 2

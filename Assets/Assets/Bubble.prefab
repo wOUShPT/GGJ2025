@@ -59,7 +59,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onEndInteractions: []
-  positionXRange: {x: -3, y: 3}
+  positionXRange: {x: -2, y: 2}
   positionYRange: {x: -3, y: -3}
   scaleRange: {x: 0.25, y: 0.8}
   targetObject: {fileID: 957147784913129372}
