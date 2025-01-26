@@ -5223,6 +5223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onEndInteractions:
   - {fileID: 6627549304817100000}
+  - {fileID: 2268755077243385590}
   animator: {fileID: 2641189343107736257}
   mode: 1
   animatorController: {fileID: 9100000, guid: acc5c45041911354cb6916210abc02eb, type: 2}
@@ -5442,6 +5443,7 @@ Transform:
   - {fileID: 7299184791402493915}
   - {fileID: 674719631740526400}
   - {fileID: 9012984664810732595}
+  - {fileID: 8332065530667768695}
   m_Father: {fileID: 2707682391668114549}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7611068948996638932
@@ -15137,6 +15139,53 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!1 &8981537152302120611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8332065530667768695}
+  - component: {fileID: 2268755077243385590}
+  m_Layer: 0
+  m_Name: Vibration
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8332065530667768695
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981537152302120611}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1890988321363503024}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2268755077243385590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981537152302120611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0478d85def7009748b24d1a18498737d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onEndInteractions: []
+  durationInMs: 150
+  amplitude: 60
 --- !u!1001 &4194200694516558412
 PrefabInstance:
   m_ObjectHideFlags: 0
